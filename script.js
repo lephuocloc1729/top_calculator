@@ -71,6 +71,7 @@ function compute() {
   curOperand = result;
   beforeOperand = '';
   operator = '';
+  isComputing = false;
   display();
   return result;
 }
