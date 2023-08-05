@@ -13,12 +13,16 @@ body{
   display: grid;
   justify-content: center;
   align-content: center;
-  height: 100vh;
+  height: 95vh;
   min-width: 350px;
   grid-template-columns: repeat(4, 80px);
   grid-template-rows: minmax(150px, auto) repeat(5, 80px);
   column-gap: 10px;
   row-gap: 10px;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
 }
 .container button{
   outline: none;
