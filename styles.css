@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  color: white;
+}
+body{
+  background-color: black;
+}
+.container{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  min-width: 350px;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(150px, auto) repeat(5, 80px);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.container button{
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.container .span2 {
+  grid-column: span 2;
+}
+.container .dark {
+  background-color: rgb(51, 51, 51);
+}
+.container .dark:hover {
+  background-color: rgb(115, 115, 115);
+}
+
+.container .orange {
+  background-color: rgb(255, 152, 0);
+}
+.container .orange:is(:hover, .selected) {
+  background-color: white;
+  color: rgb(255, 152, 0);
+}
+
+.container .gray{
+  background-color: rgb(165, 165, 165);
+  color: black;
+}
+.container .gray:hover {
+  background-color: rgb(217, 217, 217);
+}
+.container .screen {
+  grid-column: 1/ -1;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  word-break: break-all;
+}
+.container .screen .before-operator {
+  color: rgba(160, 160, 160);
+  font-size: 30px;
+}
+.container .screen .after-operator {
+  font-size: 50px;
+}
+@media only screen and (max-width: 600px) {
+  body{
+    background-color: aliceblue;
+  }
+}
